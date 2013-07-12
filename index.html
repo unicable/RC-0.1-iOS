@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/font-awesome.css">
-<script src="js/cordova.ios.js" type="text/javascript"></script>
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="js/jquery-ui.js"></script>
 <script>
@@ -21,19 +20,6 @@ function IsEmail(email) {
 	} else {
 		return true;
 	}
-}
-function exitAppPopup() {
-	navigator.notification.confirm(
-		  '¿Salir de Radio City FM?'
-		, function(button) {
-			  if (button == 2) {
-				  navigator.app.exitApp();
-			  }
-		  }
-		, 'Salir'
-		, 'No,Si'
-	);  
-	return false;
 }
 function playPause() {	
 	var song = document.getElementsByTagName('audio')[0];
@@ -287,8 +273,7 @@ $(document).ready(function(){
                     </form>
                 </div>
 			</li>
-            <div class="clear"></div>
-            <li><a href="javascript:exitAppPopup();"><i class="icon-remove-sign"></i> SALIR<span class="pull-right"><i class="icon-chevron-right"></i></span></a></li>
+            <div class="clear"></div>            
 		</ul>
 	</div>
 </div>
